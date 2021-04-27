@@ -11,6 +11,10 @@ gem install rtracks-0.0.1.gem
 - Add runtime dependency `rack`
   - Rack is a gem to interface a web framework to a Ruby application server such as Thin, Puma, Passenger, WEBrick or Unicorn.
 
+```bash
+rackup -p 3001
+```
+And point browser to `http://localhost:3001`
 
 ---
 ### Others
