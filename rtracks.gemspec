@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mingding Han"]
   spec.email         = ["mingdinghan@gmail.com"]
 
-  spec.summary       = "RTracks is a small MVC web framework similar to Ruby on Rails"
-  spec.description   = "RTracks is an MVC web framework that is a smaller version of Ruby on Rails, built from scratch."
+  spec.summary       = "Rtracks is a small MVC web framework similar to Ruby on Rails"
+  spec.description   = "Rtracks is an MVC web framework that is a smaller version of Ruby on Rails, built from scratch."
   spec.homepage      = "https://github.com/mingdinghan/rtracks"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
