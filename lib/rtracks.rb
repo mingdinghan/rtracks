@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "rtracks/version"
-require_relative "rtracks/utils"
-
-require_relative "routing"
+require "rtracks/version"
+require "rtracks/utils"
+require "rtracks/routing"
+require "rtracks/dependencies"
 
 module Rtracks
   class Application

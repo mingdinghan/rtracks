@@ -23,7 +23,7 @@ gem install rtracks-0.0.1.gem
 ### Run
 
 ```bash
-rackup -p 3001
+bundle exec rackup -p 3001
 ```
 Point browser to `http://localhost:3001`
 
