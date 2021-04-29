@@ -14,7 +14,11 @@ module Rtracks
 
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
-      text = controller.send(act)
+      begin
+        text = controller.send(act)
+      rescue
+        return [500, { 'Content-Type' => 'text/html' }, ["The application encountered an error. Check the logs!"]]
+      end
 
       [200, { 'Content-Type' => 'text/html' },
         [text]]
