@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "rtracks/version"
+require_relative "rtracks/utils"
 
 module Rtracks
   class Application
