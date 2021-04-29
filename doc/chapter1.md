@@ -30,7 +30,10 @@ Point browser to `http://localhost:3001`
 ### Test
 
 ```bash
-ruby test/application_test.rb
+rake test
+
+# verbose
+rake test TESTOPTS="--verbose"
 ```
 
 ### References
