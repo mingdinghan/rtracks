@@ -4,6 +4,7 @@ require "rtracks/version"
 require "rtracks/utils"
 require "rtracks/routing"
 require "rtracks/dependencies"
+require "rtracks/controller"
 
 module Rtracks
   class Application
@@ -24,14 +25,6 @@ module Rtracks
 
       [200, { 'Content-Type' => 'text/html' },
         [text]]
-    end
-  end
-
-  class Controller
-    attr_reader :env
-
-    def initialize(env)
-      @env = env
     end
   end
 end
