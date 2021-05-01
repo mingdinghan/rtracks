@@ -1,6 +1,15 @@
 require_relative "test_helper"
 
+class TestController < Rtracks::Controller
+  def index
+    "Hello!"
+  end
+end
+
 class TestApp < Rtracks::Application
+  def get_controller_and_action(env)
+    [TestController, "index"]
+  end
 end
 
 class RtracksAppTest < Minitest::Test
@@ -11,10 +20,10 @@ class RtracksAppTest < Minitest::Test
   end
 
   def test_request
-    get "/"
+    get "/example/anything"
 
     assert last_response.ok?
     body = last_response.body
-    assert body["This is an empty homepage"]
+    assert body["Hello"]
   end
 end
