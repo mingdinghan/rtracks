@@ -1,7 +1,10 @@
 require "erubis"
+require "rtracks/file_model"
 
 module Rtracks
   class Controller
+    include Rtracks::Model
+
     attr_reader :env
 
     def initialize(env)
