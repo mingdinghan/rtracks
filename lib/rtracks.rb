@@ -5,6 +5,7 @@ require "rtracks/utils"
 require "rtracks/routing"
 require "rtracks/dependencies"
 require "rtracks/controller"
+require "rtracks/file_model"
 
 module Rtracks
   class Application
