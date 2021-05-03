@@ -7,3 +7,7 @@
 - `File.split` will split on slashes (Unix or Mac), or backslashes (Windows)
 - `MultiJson` has simple JSON encode and decode functionality to and from Ruby hashes
 - define square-bracket methods to use Ruby object like a hash
+- writing to `ActiveModel` interface can make use of
+  - form helpers like `form_for()` directly with models
+  - URL helpers for routing
+  - model validations
