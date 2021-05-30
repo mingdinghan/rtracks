@@ -16,3 +16,4 @@
   - the `DataMapper` way: only have one object instance across multiple identical queries - risk race conditions during concurrent access
   - trade-off memory usage vs race conditions (in multi-threaded situations)
   - `ActiveRecord` cache approach scales better to more threads (avoid race conditions) and deeper call stacks, but at the cost of reduced performance (higher memory consumption, garbage collection etc)
+- Always define `respond_to_missing?` when overriding `method_missing` - see [reference](https://thoughtbot.com/blog/always-define-respond-to-missing-when-overriding)

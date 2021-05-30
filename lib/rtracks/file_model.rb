@@ -49,6 +49,10 @@ module Rtracks
         end
       end
 
+      def self.respond_to_missing?(method, include_private = false)
+        method.to_s.start_with?('find_all_by_') || super
+      end
+
       def self.all
         files = Dir["db/quotes/*.json"]
         files.map { |f| FileModel.new(f) }
