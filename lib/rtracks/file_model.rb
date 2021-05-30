@@ -43,8 +43,10 @@ module Rtracks
           select { |f| f[attr] == value }
       end
 
-      def self.find_all_by_submitter(submitter)
-        self.find_all_by_attr("submitter", submitter)
+      def self.method_missing(method, *args)
+        if method.to_s =~ /^find_all_by_(.*)/
+          return find_all_by_attr($1, *args)
+        end
       end
 
       def self.all
