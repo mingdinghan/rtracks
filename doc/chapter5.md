@@ -11,3 +11,8 @@
   - form helpers like `form_for()` directly with models
   - URL helpers for routing
   - model validations
+- Caching data models in Ruby
+  - the `ActiveRecord` way: object instances are separate on a per-query basis - no sharing
+  - the `DataMapper` way: only have one object instance across multiple identical queries - risk race conditions during concurrent access
+  - trade-off memory usage vs race conditions (in multi-threaded situations)
+  - `ActiveRecord` cache approach scales better to more threads (avoid race conditions) and deeper call stacks, but at the cost of reduced performance (higher memory consumption, garbage collection etc)
