@@ -36,11 +36,15 @@ module Rtracks
         end
       end
 
-      def self.find_all_by_submitter(submitter)
+      def self.find_all_by_attr(attr, value)
         files = Dir["db/quotes/*.json"]
         files.
-          map { |f| FileModel.new(f) }.
-          select { |f| f["submitter"] == submitter }
+          map{ |f| FileModel.new(f) }.
+          select { |f| f[attr] == value }
+      end
+
+      def self.find_all_by_submitter(submitter)
+        self.find_all_by_attr("submitter", submitter)
       end
 
       def self.all
